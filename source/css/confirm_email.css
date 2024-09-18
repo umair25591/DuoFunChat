@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body{
+    background-color: rgb(198, 235, 232);
+}
+.main-box{
+    height: 100vh;
+}
+.confirm_box {
+    max-width: 600px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid rgb(211, 211, 211);
+    box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.confirm_box p {
+    margin: 0;
+    margin-top: 10px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.confirm_box button {
+    margin-top: 20px;
+    border: none;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #317b76;
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+}
+.heading{
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}

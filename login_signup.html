@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script rel="preload" src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./source/css/login_signup.css">
+	<link rel="stylesheet" href="./source/css/loader.css">
+	<title>Sign in & Sign up Form</title>
+</head>
+
+<body>
+
+	<div id="loader" class="loader-overlay">
+        <div id="wifi-loader">
+            <svg viewBox="0 0 86 86" class="circle-outer">
+                <circle r="40" cy="43" cx="43" class="back"></circle>
+                <circle r="40" cy="43" cx="43" class="front"></circle>
+                <circle r="40" cy="43" cx="43" class="new"></circle>
+            </svg>
+            <svg viewBox="0 0 60 60" class="circle-middle">
+                <circle r="27" cy="30" cx="30" class="back"></circle>
+                <circle r="27" cy="30" cx="30" class="front"></circle>
+            </svg>
+
+            <div data-text="LOADING..." class="text"></div>
+        </div>
+    </div>
+
+
+	<div class="container">
+		<div class="forms-container">
+			<div class="signin-signup">
+				<form class="sign-in-form" id="login_form">
+					<h2 class="title">Sign in</h2>
+					<div class="input-field">
+						<i class="fas fa-user"></i>
+						<input type="email" name="email" placeholder="Email" required />
+					</div>
+					<div class="input-field">
+						<i class="fas fa-lock"></i>
+						<input type="password" name="password" placeholder="Password" required />
+					</div>
+					<div class="input-field" id="error_box"
+						style="background-color: rgb(255, 146, 146); color: rgb(255, 0, 0); display: none; align-items: center; padding: 0px 30px;">
+						<i class="fas fa-exclamation alert_icon" style="color: rgb(255, 0, 0);"></i>
+						<p id="error_msg" style="margin-left: 10px; margin-left: 10px;
+						font-weight: 600;
+						font-size: 1.1rem;"></p>
+					</div>
+					<div class="btn-container">
+						<input type="submit" value="Login" id="login_btn" class="btn solid" />
+						<div class="loader-box">
+						<div class="loader" id="login_loader"></div>
+					</div>
+					</div>
+					<!-- <p class="social-text">Or Sign in with social platforms</p>
+					<div class="social-media">
+						<a href="#" class="social-icon">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+						<a href="#" class="social-icon">
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a href="#" class="social-icon">
+							<i class="fab fa-google"></i>
+						</a>
+						<a href="#" class="social-icon">
+							<i class="fab fa-linkedin-in"></i>
+						</a>
+					</div> -->
+				</form>
+				<form id="sign_up_form" enctype="multipart/form-data" class="sign-up-form">
+					<h2 class="title">Sign up</h2>
+					<div class="input-field1">
+						<div class="circle-container" id="circle_container">
+							<img id="preview_img" src="" alt="Image Preview" />
+							<div class="placeholder">Upload Image</div>
+						</div>
+						<input type="file" name="profile_pic" id="profile_pic" accept="image/*" />
+					</div>
+					
+					<div class="input-field">
+						<i class="fas fa-user"></i>
+						<input type="text" name="name" placeholder="Username" required />
+					</div>
+					<div class="input-field">
+						<i class="fas fa-envelope"></i>
+						<input type="email" name="email" placeholder="Email" required />
+					</div>
+					<div class="input-field">
+						<i class="fas fa-lock"></i>
+						<input type="password" name="password" placeholder="Password" required />
+					</div>
+					<div class="input-field">
+						<i class="fas fa-lock"></i>
+						<input type="password" name="confirm_password" placeholder="Confirm Passowrd" required />
+					</div>
+					<div class="input-field" id="error_box_signup"
+						style="background-color: rgb(255, 146, 146); color: rgb(255, 0, 0); display: none; align-items: center; padding: 0px 30px;">
+						<i class="fas fa-exclamation alert_icon" style="color: rgb(255, 0, 0);"></i>
+						<p id="error_msg_signup" style="margin-left: 10px; margin-left: 10px;
+						font-weight: 600;
+						font-size: 1.1rem;"></p>
+					</div>
+					<div class="btn-container">
+						<input type="submit" value="Sign up" id="signup_btn" class="btn" />
+						<div class="sign-up-loader-box">
+							<div class="loader" id="sign_up_loader"></div>
+						</div>
+
+					</div>
+					<!-- <p class="social-text">Or Sign up with social platforms</p>
+					<div class="social-media">
+						<a href="#" class="social-icon">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+						<a href="#" class="social-icon">
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a href="#" class="social-icon">
+							<i class="fab fa-google"></i>
+						</a>
+						<a href="#" class="social-icon">
+							<i class="fab fa-linkedin-in"></i>
+						</a>
+					</div> -->
+				</form>
+			</div>
+		</div>
+
+		<div class="panels-container">
+			<div class="panel left-panel">
+				<div class="content">
+					<h3>New here ?</h3>
+					<p>
+						Join today and be a part of our vibrant community. Discover, connect, and grow with us!
+					</p>
+					<button class="btn transparent" id="sign-up-btn">
+						Sign up
+					</button>
+				</div>
+				<img src="./source/images/login_page.webp" class="image" alt="" width="50%"/>
+			</div>
+			<div class="panel right-panel">
+				<div class="content">
+					<h3>Have an account ?</h3>
+					<p>
+						We're excited to see you again. Sign in to continue your journey and stay connected with our
+						amazing community.
+					</p>
+					<button class="btn transparent" id="sign-in-btn">
+						Sign in
+					</button>
+				</div>
+				<img src="./source/images/signup_pages.webp" class="image" alt="" />
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./source/js/script.js"></script>
+<script src="./source/js/login.js"></script>

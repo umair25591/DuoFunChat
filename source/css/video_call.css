@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+.friend_box{
+    display: none;
+}
+#video-container {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background-color: aquamarine;
+    height: 100vh; /* Ensure the container takes up the full viewport height */
+    overflow: hidden; /* Prevent any overflow */
+    width: 100vw;
+    max-width: 100%;
+}
+
+#localVideo {
+    width: 200px;
+    height: 200px;
+    background: #000000;
+    position: absolute;
+    right: 20px;
+    border-radius: 10px;
+}
+
+#endCall {
+    display: none;
+}
+
+#remoteVideo {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.action_tab {
+    position: absolute;
+    bottom: 100px;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.center_box {
+    background-color: #ffffff52;
+    z-index: 1;
+    padding: 10px 40px;
+    border-radius: 10px;
+    gap: 40px;
+    display: flex;
+}
+
+.call_icon {
+    width: 50px;
+    cursor: pointer;
+}
+
+.mic_mute {
+    display: none;
+}
+
+.speaker_mute {
+    display: none;
+}
+.show_messages{
+    background-color: #ffffff52;
+}
+.add_friend{
+    display: none;
+}
+.friend{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    #localVideo {
+        width: 150px;
+        height: 150px;
+        right: 5px;
+    }
+
+    .center_box {
+        padding: 10px 30px;
+        gap: 30px;
+    }
+
+    .call_icon {
+        width: 40px;
+    }
+}

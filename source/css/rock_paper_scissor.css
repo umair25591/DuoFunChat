@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*? GLOBAL */
+:root {
+    --mainBgColor: #f3f3f3;
+    --secondaryBgColor: #fff;
+    --hoverColor: #f5465d;
+    --mainTextColor: #444;
+}
+
+* {
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--mainTextColor);
+}
+
+body {
+    height: 100vh;
+    background-color: #c5ddeb !important;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/*? CONTAINER */
+.wrapper {
+    background-color: var(--secondaryBgColor);
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.66);
+    -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.66);
+    -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.66);
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+}
+
+/*? PLAYER */
+
+.player button {
+    margin: 1rem;
+}
+
+.player-option {
+    padding: 15px;
+    border-radius: 25px;
+    width: 160px;
+    height: 160px;
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+
+.player-option.active {
+    border: 4px solid rgb(51, 255, 0);
+}
+
+.option-rock {
+    background: linear-gradient(to top left, #e52a5a, #ff585f);
+    grid-column: span 2;
+    justify-self: center;
+}
+
+.option-rock:hover {
+    background: linear-gradient(to bottom right, #e52a5a, #ff585f);
+}
+
+.option-paper {
+    background: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.option-paper:hover {
+    background: linear-gradient(to bottom right, #39b385, #9be15d);
+}
+
+.option-scissor {
+    background: linear-gradient(to top left, #ffb003, #ffcb03);
+    transform: rotate(180deg);
+    transform: scale(-1, 1);
+}
+
+.option-scissor:hover {
+    background: linear-gradient(to bottom right, #ffb003, #ffcb03);
+}
+
+
+
+
+
+
+.computer-option.rock {
+    background: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+.computer-option.paper {
+    background: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.computer-option.scissors {
+    background: linear-gradient(to top left, #ffb003, #ffcb03);
+    transform: rotate(180deg);
+    transform: scale(-1, 1);
+}
+
+.op-select {
+    display: none;
+}
+
+
+.player {
+    width: 50%;
+}
+
+.computer {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid var(--mainTextColor);
+}
+
+.computer-option {
+    padding: 20px;
+    border-radius: 25px;
+    background: #c8c8c8;
+    height: 160px;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*? NEXT GAME */
+.next-round {
+    margin-top: 15px;
+    padding: 7px;
+    border-radius: 10px;
+    border: 2px solid var(--mainTextColor);
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+.next-round:hover {
+    background: linear-gradient(to bottom right, #ffb003, #ffcb03);
+}
+
+.message {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--secondaryBgColor);
+    border-radius: 25px;
+    font-size: 2rem;
+    padding: 1rem;
+    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.66);
+    -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.66);
+    -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.66);
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+#playagain,
+#end-chat {
+    display: none;
+}
+
+.game_icon {
+    font-size: 120px;
+}
+
+
+@media only screen and (max-width:1400px) {
+    .wrapper {
+        padding: 10px;
+        display: flex;
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    .player-option {
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .computer-option {
+        padding: 10px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .game_icon {
+        font-size: 60px;
+    }
+
+    .message {
+        top: 17px;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .wrapper {
+        padding: 10px;
+        display: flex;
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    .player-option {
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .computer-option {
+        padding: 10px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .game_icon {
+        font-size: 60px;
+    }
+
+    .message {
+        top: 17px;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:600px) {
+    .wrapper {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .player {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0px;
+        padding-top: 100px;
+    }
+
+    .computer {
+        width: 100%;
+        border: none;
+        flex-direction: column;
+        border-top: 1px solid var(--mainTextColor);
+        padding-top: 10px;
+        padding: 20px 0px;
+    }
+
+    .player-option {
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .computer-option {
+        padding: 10px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .game_icon {
+        font-size: 60px;
+    }
+
+    .message {
+        top: 20px;
+    }
+}
+
+
+
+
+@media only screen and (max-width:400px) {
+    .wrapper {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .player {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0px;
+        padding-top: 100px;
+    }
+
+    .computer {
+        width: 100%;
+        border: none;
+        border-top: 1px solid var(--mainTextColor);
+        padding-top: 10px;
+        padding: 20px 0px;
+    }
+
+    .player-option {
+        padding: 10px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .computer-option {
+        padding: 10px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .game_icon {
+        font-size: 40px;
+    }
+
+    .message {
+        top: 20px;
+    }
+
+    .player button {
+        margin: 10px;
+    }
+
+}
